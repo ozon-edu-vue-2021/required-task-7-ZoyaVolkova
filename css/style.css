@@ -1,7 +1,9 @@
 @import "reset.css";
 @import "http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -13,7 +15,7 @@ body {
 #container {
   width: 320px;
   height: 1000px;
-  background: #FFFFFF;
+  background: #ffffff;
   position: relative;
   margin: 0 auto;
   overflow: hidden;
@@ -39,54 +41,55 @@ body {
 
 #container.details .list-view li.active {
   -webkit-transform: translate3d(40px, 0px, 0);
-          transform: translate3d(40px, 0px, 0);
+  transform: translate3d(40px, 0px, 0);
   border-color: rgba(255, 255, 255, 0);
   -webkit-transition: opacity 0.2s, border-color 0.2s, -webkit-transform 0.3s;
   transition: opacity 0.2s, border-color 0.2s, -webkit-transform 0.3s;
   transition: transform 0.3s, opacity 0.2s, border-color 0.2s;
-  transition: transform 0.3s, opacity 0.2s, border-color 0.2s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.2s, border-color 0.2s,
+    -webkit-transform 0.3s;
 }
 
-#container.details .list-view li.active:hover {
+#container .list-view li.active:hover {
   background: none;
 }
 
-#container.details .details-view .back {
+#container .details-view .back {
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
-#container.details .details-view .back:hover {
+#container .details-view .back:hover {
   cursor: pointer;
 }
 
-#container.details .details-view .background {
+#container .details-view .background {
   -webkit-transform: translate3d(0, -40px, 0);
-          transform: translate3d(0, -40px, 0);
+  transform: translate3d(0, -40px, 0);
   -webkit-transition: -webkit-transform 0.25s 0.05s;
   transition: -webkit-transform 0.25s 0.05s;
   transition: transform 0.25s 0.05s;
   transition: transform 0.25s 0.05s, -webkit-transform 0.25s 0.05s;
 }
 
-#container.details .details-view li:nth-child(1) {
+#container .details-view li:nth-child(1) {
   -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
-#container.details .details-view li:nth-child(2) {
+#container .details-view li:nth-child(2) {
   -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
-#container.details .details-view li:nth-child(3) {
+#container .details-view li:nth-child(3) {
   -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
-#container.details .details-view li:nth-child(4) {
+#container .details-view li:nth-child(4) {
   -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 #container .list-view {
@@ -95,7 +98,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  background: #FFFFFF;
+  background: #ffffff;
   z-index: 1;
   -webkit-transition: background 0.3s 0.1s;
   transition: background 0.3s 0.1s;
@@ -107,10 +110,12 @@ body {
   right: 0;
   height: 70px;
   border-bottom: 1px solid #dddddd;
-  -webkit-transition: opacity 0.3s 0.3s, border-color 0.3s 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: opacity 0.3s 0.3s, border-color 0.3s 0.3s,
+    -webkit-transform 0.3s;
   transition: opacity 0.3s 0.3s, border-color 0.3s 0.3s, -webkit-transform 0.3s;
   transition: transform 0.3s, opacity 0.3s 0.3s, border-color 0.3s 0.3s;
-  transition: transform 0.3s, opacity 0.3s 0.3s, border-color 0.3s 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s 0.3s, border-color 0.3s 0.3s,
+    -webkit-transform 0.3s;
 }
 
 #container .list-view ul li strong {
@@ -120,52 +125,60 @@ body {
 
 #container .list-view ul li:nth-child(1) {
   -webkit-transform: translate3d(0, 0px, 0);
-          transform: translate3d(0, 0px, 0);
+  transform: translate3d(0, 0px, 0);
 }
 
 #container .list-view ul li:nth-child(2) {
   -webkit-transform: translate3d(0, 70px, 0);
-          transform: translate3d(0, 70px, 0);
+  transform: translate3d(0, 70px, 0);
 }
 
 #container .list-view ul li:nth-child(3) {
   -webkit-transform: translate3d(0, 140px, 0);
-          transform: translate3d(0, 140px, 0);
+  transform: translate3d(0, 140px, 0);
 }
 
 #container .list-view ul li:nth-child(4) {
   -webkit-transform: translate3d(0, 210px, 0);
-          transform: translate3d(0, 210px, 0);
+  transform: translate3d(0, 210px, 0);
 }
 
 #container .list-view ul li:nth-child(5) {
   -webkit-transform: translate3d(0, 280px, 0);
-          transform: translate3d(0, 280px, 0);
+  transform: translate3d(0, 280px, 0);
 }
 
 #container .list-view ul li:nth-child(6) {
   -webkit-transform: translate3d(0, 350px, 0);
-          transform: translate3d(0, 350px, 0);
+  transform: translate3d(0, 350px, 0);
 }
 
 #container .list-view ul li:nth-child(7) {
   -webkit-transform: translate3d(0, 420px, 0);
-          transform: translate3d(0, 420px, 0);
+  transform: translate3d(0, 420px, 0);
 }
 
 #container .list-view ul li:nth-child(8) {
   -webkit-transform: translate3d(0, 490px, 0);
-          transform: translate3d(0, 490px, 0);
+  transform: translate3d(0, 490px, 0);
 }
 
 #container .list-view ul li:nth-child(9) {
   -webkit-transform: translate3d(0, 560px, 0);
-          transform: translate3d(0, 560px, 0);
+  transform: translate3d(0, 560px, 0);
 }
 
 #container .list-view ul li:nth-child(10) {
   -webkit-transform: translate3d(0, 630px, 0);
-          transform: translate3d(0, 630px, 0);
+  transform: translate3d(0, 630px, 0);
+}
+#container .list-view ul li:nth-child(11) {
+  -webkit-transform: translate3d(0, 700px, 0);
+  transform: translate3d(0, 700px, 0);
+}
+#container .list-view ul li:nth-child(12) {
+  -webkit-transform: translate3d(0, 770px, 0);
+  transform: translate3d(0, 770px, 0);
 }
 
 #container .list-view ul li:hover {
@@ -174,7 +187,7 @@ body {
 }
 
 #container .list-view ul li:before {
-  content: '';
+  content: "";
   display: inline-block;
   vertical-align: middle;
   width: 50px;
@@ -191,8 +204,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 0;
-  background: #FFFFFF;
+  z-index: 1;
+  background: #ffffff;
 }
 
 #container .details-view .background {
@@ -216,13 +229,31 @@ body {
   background: url("../i/back-icon.png");
   background-size: 100%;
   border: 0;
-  -webkit-transform: scale(0.1);
-          transform: scale(0.1);
+
   -webkit-transition: -webkit-transform 0.15s;
   transition: -webkit-transform 0.15s;
   transition: transform 0.15s;
   transition: transform 0.15s, -webkit-transform 0.15s;
-  z-index: 1;
+  z-index: 2;
+}
+#container .details-view .photo {
+  position: absolute;
+  top: 5px;
+  left: 50px;
+  width: 60px;
+  height: 60px;
+  background: url("../i/default-img.png");
+  background-size: 100%;
+  border: 0;
+  border-radius: 50%;
+  z-index: 2;
+}
+#container .details-view .name {
+  position: absolute;
+  top: 25px;
+  left: 120px;
+
+  z-index: 2;
 }
 
 #container .details-view ul {
@@ -243,44 +274,11 @@ body {
   margin: 0 15px;
 }
 
-#container .details-view li:nth-child(1) {
-  -webkit-transform: translate3d(0, 30px, 0);
-          transform: translate3d(0, 30px, 0);
-  -webkit-transition: -webkit-transform 0.3s 0s;
-  transition: -webkit-transform 0.3s 0s;
-  transition: transform 0.3s 0s;
-  transition: transform 0.3s 0s, -webkit-transform 0.3s 0s;
-}
-
-#container .details-view li:nth-child(2) {
-  -webkit-transform: translate3d(0, 35px, 0);
-          transform: translate3d(0, 35px, 0);
-  -webkit-transition: -webkit-transform 0.3s 0.02s;
-  transition: -webkit-transform 0.3s 0.02s;
-  transition: transform 0.3s 0.02s;
-  transition: transform 0.3s 0.02s, -webkit-transform 0.3s 0.02s;
-}
-
-#container .details-view li:nth-child(3) {
-  -webkit-transform: translate3d(0, 40px, 0);
-          transform: translate3d(0, 40px, 0);
-  -webkit-transition: -webkit-transform 0.3s 0.04s;
-  transition: -webkit-transform 0.3s 0.04s;
-  transition: transform 0.3s 0.04s;
-  transition: transform 0.3s 0.04s, -webkit-transform 0.3s 0.04s;
-}
-
-#container .details-view li:nth-child(4) {
-  -webkit-transform: translate3d(0, 45px, 0);
-          transform: translate3d(0, 45px, 0);
-  -webkit-transition: -webkit-transform 0.3s 0.06s;
-  transition: -webkit-transform 0.3s 0.06s;
-  transition: transform 0.3s 0.06s;
-  transition: transform 0.3s 0.06s, -webkit-transform 0.3s 0.06s;
-}
-
 li.people-title {
   margin-left: 8px;
   font-weight: bold;
   font-size: larger;
+}
+.hidden {
+  display: none;
 }
