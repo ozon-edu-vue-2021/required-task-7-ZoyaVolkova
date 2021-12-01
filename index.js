@@ -12,26 +12,25 @@ const displayContacts = (contacts) => {
   contactsList.innerHTML = htmlString;
 };
 
-const displayFriends = (contacts, id) => {
+const displayFriends = (contacts, id, popularFriends) => {
   const contact = contacts.find((a) => a.name === id);
-  const notFriends = contacts
-    .filter(
-      (a) =>
+
+  let notFriends = [];
+  for (let i = 0; i < contacts.length; i++) {
+    let a = contacts[i];
+    if (notFriends.length < 3) {
+      if (
         a.id !== contact.id &&
         a.id !== contact.friends[0] &&
         a.id !== contact.friends[1] &&
         a.id !== contact.friends[2]
-    )
-    .slice(0, 3);
-
-  const popularFriends = [...contacts]
-    .sort((a, b) => {
-      return a.name.localeCompare(b.name);
-    })
-    .sort((a, b) => {
-      return b.repeat - a.repeat;
-    })
-    .slice(0, 3);
+      ) {
+        notFriends.push(a);
+      }
+    } else {
+      break;
+    }
+  }
 
   const string = `<div class="back"></div>
   <div class="background"></div><div class="photo"></div><div class="name">${
@@ -73,7 +72,9 @@ const getContacts = async () => {
     const res = await fetch("data.json");
     contacts = await res.json();
     displayContacts(contacts);
+
     const friends = [];
+
     contacts.forEach((a) => {
       a.friends.forEach((friend) => {
         friends.push(friend);
@@ -82,10 +83,21 @@ const getContacts = async () => {
     contacts.forEach((contact) => {
       contact.repeat = friends.filter((a) => a === contact.id).length;
     });
+
+    const popularFriends = [...contacts]
+      .sort((a, b) => {
+        if (a.repeat === b.repeat) {
+          return a.name.localeCompare(b.name);
+        }
+        return b.repeat - a.repeat;
+      })
+      .slice(0, 3);
+
     contactsList.querySelectorAll("li").forEach((contact) => {
       contact.addEventListener("click", () => {
         toggleHidden();
-        displayFriends(contacts, contact.id);
+
+        displayFriends(contacts, contact.id, popularFriends);
         detailsView.querySelector(".back").addEventListener("click", () => {
           toggleHidden();
         });
